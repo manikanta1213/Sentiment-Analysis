@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request
 import pickle
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder='templates')
 
 def predict_sentiment_emotion(text):
     with open('tokenizer.pickle', 'rb') as handle:
